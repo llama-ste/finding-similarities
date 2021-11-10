@@ -82,18 +82,24 @@
         // run the webcam image through the image model
         async function predict() {
             // predict can take in an image, video or canvas html element
-            $('#delete').hide()
-            $('.start-btn').hide()
-            $('#replay').show()
-            let image = document.getElementById("preview");
-            const prediction = await model.predict(image, false);
-            prediction.sort((a, b) => {
-                return parseFloat(b.probability) - parseFloat(a.probability);
-            })
-            for (let i = 0; i < maxPredictions; i++) {
-                const classPrediction =
-                    prediction[i].className + ": " + prediction[i].probability.toFixed(2) * 100 + "%";
-                labelContainer.childNodes[i].innerHTML = classPrediction;
+            let fileCheck = document.getElementById('imageInput').value;
+            if (fileCheck) {
+                $('#delete').hide()
+                $('.start-btn').hide()
+                $('#replay').show()
+                let image = document.getElementById("preview");
+                const prediction = await model.predict(image, false);
+                prediction.sort((a, b) => {
+                    return parseFloat(b.probability) - parseFloat(a.probability);
+                })
+                for (let i = 0; i < maxPredictions; i++) {
+                    const classPrediction =
+                        prediction[i].className + ": " + prediction[i].probability.toFixed(2) * 100 + "%";
+                    labelContainer.childNodes[i].innerHTML = classPrediction;
+                }
+                $('#label-container').show();
+            } else {
+                alert("이미지를 넣어주세요.")
             }
         }
     </script>
