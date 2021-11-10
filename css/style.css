@@ -14,26 +14,27 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 800;
 }
 
 .title a {
-  color: #fff;
+  color: #ffffff;
 }
 
 .subtitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 30px;
   margin-top: 3%;
+  color: rgb(162, 168, 168);
 }
 
 .image-upload-wrap {
   width: 70%;
-  margin: 4% auto;
+  margin: 3% auto;
 }
 
 .image-upload {
@@ -47,6 +48,21 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+#inputLabel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: 700;
+  color: rgb(221, 222, 221);
+}
+
+#inputLabel i {
+  font-size: 150%;
 }
 
 #imageInput {
@@ -66,18 +82,18 @@ a {
 
 #preview {
   display: none;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 230px;
+  max-height: 230px;
   margin: 5% 0px;
 }
 
 #delete {
+  position: relative;
   display: none;
   border: none;
   background-color: #c62828;
   color: #ffffff;
   padding: 10px 15px;
-  width: auto;
   border-radius: 5px;
   font-weight: 800;
   margin-bottom: 5%;
@@ -130,23 +146,21 @@ a {
   color: rgb(236, 191, 82);
 }
 
-#label-container {
-}
-
 #replay {
+  position: relative;
   display: none;
   border: none;
   background-color: #4bcbcc;
   color: #ffffff;
   padding: 10px 15px;
-  width: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   font-weight: 800;
   margin-bottom: 5%;
 }
 
 #label-container {
   margin: 5% 0px;
+  display: none;
 }
 
 .share {
@@ -162,14 +176,14 @@ a {
 }
 
 .start-btn {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
   border: none;
   background-color: #cb9ca1;
-  padding: 10px;
-  border-radius: 30px;
+  padding: 10px 15px;
+  border-radius: 10px;
   color: #ffffff;
   font-weight: bold;
   font-size: 18px;
