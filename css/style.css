@@ -197,3 +197,17 @@ a {
 .start-btn:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  #inputLabel {
+    font-size: 17px;
+  }
+}
