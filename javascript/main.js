@@ -22,3 +22,13 @@ $('#delete').on('click', () => {
     $('#imageInput').val('');
     $('#imageInput').show();
 })
+
+$('#replay').on('click', () => {
+    $('#preview').hide();
+    $('#delete').hide();
+    $('#label-container').hide();
+    $('#replay').hide();
+    $('#imageInput').val('');
+    $('#imageInput').show();
+    $('.start-btn').show();
+})

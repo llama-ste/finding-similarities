@@ -76,14 +76,31 @@ a {
   border: none;
   background-color: #c62828;
   color: #ffffff;
-  padding: 5px;
-  width: 20%;
+  padding: 10px 15px;
+  width: auto;
   border-radius: 5px;
   font-weight: 800;
+  margin-bottom: 5%;
+}
+
+#replay {
+  display: none;
+  border: none;
+  background-color: #4bcbcc;
+  color: #ffffff;
+  padding: 10px 15px;
+  width: auto;
+  border-radius: 5px;
+  font-weight: 800;
+  margin-bottom: 5%;
 }
 
 #label-container {
   margin: 5% 0px;
+}
+
+.share {
+  text-align: center;
 }
 
 .start {

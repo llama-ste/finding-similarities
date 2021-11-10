@@ -14,6 +14,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="./javascript/main.js"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-618b953465a9767e"></script>
+
+
+
 </head>
 
 <body>
@@ -27,6 +32,7 @@
             <img id="preview" src="#" alt="">
             <button id="delete">DELETE</button>
             <div id="label-container"></div>
+            <button id="replay">다른 사진으로 다시하기</button>
         </div>
     </div>
     <div class="start">
@@ -35,6 +41,11 @@
     </div>
 
     <div id="label-container"></div>
+
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox_70jr share"></div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
@@ -71,6 +82,9 @@
         // run the webcam image through the image model
         async function predict() {
             // predict can take in an image, video or canvas html element
+            $('#delete').hide()
+            $('.start-btn').hide()
+            $('#replay').show()
             let image = document.getElementById("preview");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => {
