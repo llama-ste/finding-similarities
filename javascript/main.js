@@ -28,6 +28,7 @@ $('#replay').on('click', () => {
     $('#delete').hide();
     $('#label-container').hide();
     $('#replay').hide();
+    $('.result-message').hide();
     $('#imageInput').val('');
     $('#imageInput').show();
     $('.start-btn').show();
