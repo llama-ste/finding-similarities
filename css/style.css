@@ -207,7 +207,24 @@ a {
     font-size: 17px;
   }
 
+  .result-title {
+    font-size: 20px;
+  }
+
+  .result-explain {
+    font-size: 16px;
+  }
+
+  #label-container {
+    font-size: 14px;
+  }
+
   #inputLabel {
     font-size: 17px;
+  }
+
+  #delete {
+    font-size: 9px;
+    padding: 7px 10px;
   }
 }
