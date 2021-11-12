@@ -10,7 +10,6 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="./javascript/main.js"></script>
@@ -18,34 +17,57 @@
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-618b953465a9767e"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header class="title">
-        <a href="#">스트릿 우먼 파이터 닮은꼴 찾기</a>
-    </header>
-    <p class="subtitle">스우파 리더중 나는 어떤 멤버와 닮았을까?</p>
-    <div class="image-upload-wrap">
-        <div class="image-upload">
-            <label id="inputLabel" for="imageInput">
-                이미지를 넣어주세요.
-                <i class="bi bi-download"></i>
-            </label>
-            <input type="file" id="imageInput" accept="image/*">
-            <img id="preview" src="#" alt="">
-            <p class="result-message"></p>
-            <button id="delete">DELETE</button>
-            <div id="label-container"></div>
-            <button id="replay">다른 사진으로 다시하기</button>
+    <div class="container d-flex start flex-column align-items-center justify-content-center vh-100">
+
+        <div class="start-title-wrapper d-flex flex-column align-items-center mb-4">
+            <h1>스트릿 우먼 파이터 닮은꼴</h1>
+            <h5 class="mb-0">당신의 리더는 누구인가요?</h5>
+        </div>
+
+        <div class="start-image-wrapper mb-4">
+            <div class="image-wrapper d-flex align-items-center justify-content-center">
+                <label class="d-flex flex-column align-items-center justify-content-center image-label"
+                    for="image-input">
+                    이미지를 넣어주세요.
+                    <i class="bi bi-download"></i>
+                </label>
+                <input class="image-input d-none" type="file" accept="image/*">
+                <img class="d-none mh-100 w-100 image-preview" id="preview" src="#" alt="">
+            </div>
+        </div>
+
+        <div class="start-button-wrapper">
+            <button class="btn btn-primary disabled start-btn">
+                얼굴인식 시작하기
+            </button>
+        </div>
+
+    </div>
+    <div class="container d-none loading vh-100">
+        <div class="spinner"></div>
+        <h3 class="loading-text">Loading...</h3>
+    </div>
+
+    <div class="container d-none result test vh-100 d-flex flex-column align-items-center justify-content-center">
+        <div class="d-flex">
+            <div>
+                <img class="leader" src="#" alt="">
+                <img class="result-preview" src="#" alt="">
+            </div>
+            <div class="result-message"></div>
+        </div>
+        <div class="d-flex w-75">
+            <div class="d-flex flex-column justify-content-around w-100" id="label-container"></div>
+        </div>
+        <div class="addthis_inline_share_toolbox_70jr share"></div>
+        <div class="">
+            <button class="btn btn-primary restart-btn">다른 사진으로 재시도</button>
         </div>
     </div>
-    <div class="start">
-        <button class="start-btn" type="button" onclick="predict()">얼굴인식 시작하기</button>
-    </div>
-
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_inline_share_toolbox_70jr share"></div>
-
 </body>
 
 </html>
