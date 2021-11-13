@@ -21,53 +21,65 @@
 </head>
 
 <body>
-    <div class="container d-flex start flex-column align-items-center justify-content-center vh-100">
 
+    <div class="container d-flex start flex-column align-items-center justify-content-center vh-100 overflow-hidden">
         <div class="start-title-wrapper d-flex flex-column align-items-center mb-4">
-            <h1>스트릿 우먼 파이터 닮은꼴</h1>
-            <h5 class="mb-0">당신의 리더는 누구인가요?</h5>
+            <h1 class="main-title">스트릿 우먼 파이터 닮은꼴</h1>
+            <h4 class="sub-title mb-0">당신의 리더는 누구인가요?</h5>
         </div>
-
         <div class="start-image-wrapper mb-4">
             <div class="image-wrapper d-flex align-items-center justify-content-center">
                 <label class="d-flex flex-column align-items-center justify-content-center image-label"
                     for="image-input">
                     이미지를 넣어주세요.
-                    <i class="bi bi-download"></i>
+                    <i class="bi bi-download input-icon"></i>
                 </label>
                 <input class="image-input d-none" type="file" accept="image/*">
-                <img class="d-none mh-100 w-100 image-preview" id="preview" src="#" alt="">
+                <img class="d-none image-preview" id="preview" src="#" alt="">
             </div>
         </div>
-
         <div class="start-button-wrapper">
-            <button class="btn btn-primary disabled start-btn">
+            <button class="btn disabled start-btn">
                 얼굴인식 시작하기
             </button>
         </div>
-
     </div>
-    <div class="container d-none loading vh-100">
+
+    <div class="container d-none loading vh-100 overflow-hidden">
+        <img class="loading-img" src="./image/llama.gif">
         <div class="spinner"></div>
         <h3 class="loading-text">Loading...</h3>
     </div>
 
-    <div class="container d-none result test vh-100 d-flex flex-column align-items-center justify-content-center">
-        <div class="d-flex">
-            <div>
-                <img class="leader" src="#" alt="">
-                <img class="result-preview" src="#" alt="">
+    <div
+        class="container d-none result px-5 vh-100 flex-column align-items-center justify-content-center overflow-hidden">
+        <div class="d-flex w-100 mb-4 align-items-center justify-content-between">
+            <img class="leader" src="#" alt="">
+            <div class="heart mb-2"></div>
+            <div class="result-preview"></div>
+        </div>
+        <div class="d-flex w-100 mb-4 justify-content-between">
+            <div class="w-50 result-message">
             </div>
-            <div class="result-message"></div>
+            <div class="w-50 user-message">
+            </div>
         </div>
-        <div class="d-flex w-75">
-            <div class="d-flex flex-column justify-content-around w-100" id="label-container"></div>
+        <div class="d-flex w-100 mb-4">
+            <div class="d-flex flex-column justify-content-around w-100" id="label-container">
+            </div>
         </div>
-        <div class="addthis_inline_share_toolbox_70jr share"></div>
+        <div class="addthis_inline_share_toolbox_70jr share mb-4"></div>
         <div class="">
-            <button class="btn btn-primary restart-btn">다른 사진으로 재시도</button>
+            <button class="btn restart-btn">다른 사진으로 재시도</button>
         </div>
     </div>
+
+    <div class="who">
+        <script
+            id="_waul2e">var _wau = _wau || []; _wau.push(["dynamic", "zfa68citnc", "l2e", "ffd966ffffff", "small"]);</script>
+        <script async src="//waust.at/d.js"></script>
+    </div>
+
 </body>
 
 </html>
