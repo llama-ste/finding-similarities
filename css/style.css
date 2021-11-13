@@ -56,7 +56,7 @@
 
 .image-label {
   font-family: sub;
-  font-size: x-large;
+  font-size: large;
   color: lightgray;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .input-icon {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .image-preview {
@@ -416,12 +416,11 @@
 }
 
 /* whos amung */
-.waubutton {
+.hit-counter-text {
+  font-family: sub;
+  color: rgb(47, 61, 83);
 }
 
 .who {
   display: none;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
