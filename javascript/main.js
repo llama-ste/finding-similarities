@@ -194,3 +194,6 @@ async function predict() {
 }
 
 
+setTimeout(function() {
+    $('.hit-counter-text').html(`<small>총 ${$('div.who a p').html()}명이 테스트해봤어요</small>`)
+}, 2000)
