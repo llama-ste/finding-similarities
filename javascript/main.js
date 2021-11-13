@@ -26,6 +26,7 @@ wrapper.addEventListener('click', () =>{
 })
 
 $('.start-btn').on('click', () => {
+    gtag('event', 'start-btn');
     $('.start').removeClass('d-flex')
     $('.start').addClass('d-none')
     $('.loading').removeClass('d-none')
@@ -33,6 +34,7 @@ $('.start-btn').on('click', () => {
 })
 
 $('.restart-btn').on('click', () => {
+    gtag('event', 'restart-btn');
     $('#label-container').children().remove();
     $('.result-message').children().remove();
     $('.user-message').children().remove();
